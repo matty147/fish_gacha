@@ -1,0 +1,1 @@
+gacha = instance_find(obj_gacha,0);
