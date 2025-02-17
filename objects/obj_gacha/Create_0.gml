@@ -26,6 +26,10 @@ current_fish_name = "spr_bass";
 curent_fish_rarity = "";
 
 pulls = 0;
+pulling = false;
+pull_amount = 0;
+
+fish_cought = [];
 
 
 time = 0;

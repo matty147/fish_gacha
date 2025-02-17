@@ -3,6 +3,7 @@ _delete = 100;
 rare = false;
 legend = false;
 
+gacha = instance_find(obj_gacha,0);
 
 //shader
 add = 0.2;

@@ -1,7 +1,7 @@
 if _delete < 0
 {
+	gacha.pulling = false;
 	instance_destroy();
-	_delete = 100
 }_delete--;
 
 add = mouse_x / room_width;
