@@ -9,18 +9,27 @@ function spawn_fish(your_fish, rarity,position)
 		fish.x -= image_xscale;
 		fish.y -= image_yscale;
 		current_fish_name = string(your_fish);
-		curent_fish_rarity = rarity;
 		switch (rarity)
 		{
+			case "normal":
+			fish.fish_rarity = rarity.NORMAL;
+				break;
 			case "common":
+			fish.fish_rarity = rarity.COMMON;
+				break;
+			case "rare":
+			fish.fish_rarity = rarity.RARE;
+				break;
+			case "super_rare":
+			fish.fish_rarity = rarity.SUPER_RARE;
 				break;
 			
-			case "rare":
-			fish.rare = true;
+			case "super_super_rare":
+			fish.fish_rarity = rarity.SUPER_SUPER_RARE;
 				break;
 		
-			case "legend":
-			fish.legend = true;
+			case "ultra_rare":
+			fish.fish_rarity = rarity.ULTRA_RARE;
 				break;
 			
 		}
@@ -76,28 +85,45 @@ if pulls > 0 && !pulling
 	
 		var position = [_x,_y]; // x,y
 	
-		var rand = random_range(1,1000);
+		var rand = random_range(1,10000);
 
-		if rand <= 750
+		pitty_counter += 0.01;
+
+		if rand <= roll_chance[0] // normal
 		{
-			pitty_counter += 0.125;
 			var your_fish = common_fish[random_range(0,array_length(common_fish))];
 			show_debug_message("You got a fish!!!");
-			spawn_fish(your_fish, "common",position);
+			spawn_fish(your_fish, "normal",position);
 
-		}else if rand <= 990 - pitty_counter
+		}else if rand <= roll_chance[1] // common
 		{
-			pitty_counter += 0.25;
+			var your_fish = rare_fish[random_range(0,array_length(rare_fish))];
+			show_debug_message("You got a fish!!!");	
+			spawn_fish(your_fish,"common",position);
+		}else if rand <= roll_chance[2] // rare
+		{
 			var your_fish = rare_fish[random_range(0,array_length(rare_fish))];
 			show_debug_message("You got a fish!!!");	
 			spawn_fish(your_fish,"rare",position);
-	
-		}else
+			
+		}else if rand <= roll_chance[3] // super rare
+		{
+			var your_fish = rare_fish[random_range(0,array_length(rare_fish))];
+			show_debug_message("You got a fish!!!");	
+			spawn_fish(your_fish,"super_rare",position);
+			
+		}else if rand <= roll_chance[4] // super super rare
+		{
+			var your_fish = rare_fish[random_range(0,array_length(rare_fish))];
+			show_debug_message("You got a fish!!!");	
+			spawn_fish(your_fish,"super_super_rare",position);
+			
+		}else if rand <= roll_chance[5] - pitty_counter // ultra rare
 		{
 			pitty_counter = 0;
-			var your_fish = legend_fish[random_range(0,array_length(legend_fish))];
+			var your_fish = ultra_rare_fish[random_range(0,array_length(ultra_rare_fish))];
 			show_debug_message("You got a fish!!!");	
-			spawn_fish(your_fish, "legend",position);
+			spawn_fish(your_fish, "ultra_rare",position);
 		}
 	}
 }

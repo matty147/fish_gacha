@@ -1,3 +1,16 @@
+enum rarity {
+	NORMAL,
+	COMMON, //?
+	RARE,
+	SUPER_RARE,
+	SUPER_SUPER_RARE,
+	ULTRA_RARE
+}
+
+normal_fish = [
+
+];
+
 common_fish = [
 "salmon",
 "trout",
@@ -17,13 +30,34 @@ rare_fish = [
 "opah",
 "napoleonwrasse"];
 
-legend_fish = [
+super_rare_fish = [
+
+
+];
+
+super_super_rare_fish = [
+
+
+];
+
+ultra_rare_fish = [
 "coelacanth",
 "oarfish",
 "devilsholepupfish"];
 
+// roll chances
+
+roll_chance = [ 
+5000, // normal
+6000, //common
+7500, // rare
+9000, // super rare 
+9500, // super super rare 
+9990 // ultra rare
+];
+
 current_fish_name = "spr_bass";
-curent_fish_rarity = "";
+curent_fish_rarity = rarity.COMMON;
 
 pulls = 0;
 pulling = false;

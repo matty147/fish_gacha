@@ -1,14 +1,9 @@
-//enum rarrity {
-	
-	
-	
-	
-//}
-
 _delete = 100;
 
-rare = false;
-legend = false;
+//rare = false;
+//legend = false;
+
+fish_rarity = rarity.COMMON;
 
 gacha = instance_find(obj_gacha,0);
 
