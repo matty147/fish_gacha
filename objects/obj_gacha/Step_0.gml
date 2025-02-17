@@ -80,20 +80,21 @@ if pulls > 0 && !pulling
 
 		if rand <= 750
 		{
+			pitty_counter += 0.125;
 			var your_fish = common_fish[random_range(0,array_length(common_fish))];
 			show_debug_message("You got a fish!!!");
 			spawn_fish(your_fish, "common",position);
 
-		}else if rand <= 990
+		}else if rand <= 990 - pitty_counter
 		{
-	
+			pitty_counter += 0.25;
 			var your_fish = rare_fish[random_range(0,array_length(rare_fish))];
 			show_debug_message("You got a fish!!!");	
 			spawn_fish(your_fish,"rare",position);
 	
 		}else
 		{
-	
+			pitty_counter = 0;
 			var your_fish = legend_fish[random_range(0,array_length(legend_fish))];
 			show_debug_message("You got a fish!!!");	
 			spawn_fish(your_fish, "legend",position);

@@ -29,6 +29,8 @@ pulls = 0;
 pulling = false;
 pull_amount = 0;
 
+pitty_counter = 0;  
+
 fish_cought = [];
 
 

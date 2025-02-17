@@ -18,7 +18,7 @@ shader_reset();
 
 if rare == true
 {
-	draw_sprite(spr_sr, 0, x + sprite_width / 1/3,y);
+	draw_sprite(spr_r, 0, x + sprite_width / 1/3,y);
 }else if legend == true
 {
 		draw_sprite(spr_ur, 0, x + sprite_width / 1/3,y);

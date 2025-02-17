@@ -1,3 +1,10 @@
+//enum rarrity {
+	
+	
+	
+	
+//}
+
 _delete = 100;
 
 rare = false;
