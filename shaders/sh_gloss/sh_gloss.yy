@@ -1,7 +1,7 @@
 {
   "$GMShader":"",
-  "%Name":"sha_gloss",
-  "name":"sha_gloss",
+  "%Name":"sh_gloss",
+  "name":"sh_gloss",
   "parent":{
     "name":"Shaders",
     "path":"folders/Shaders.yy",

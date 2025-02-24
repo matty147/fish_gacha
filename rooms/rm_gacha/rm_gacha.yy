@@ -1,15 +1,15 @@
 {
   "$GMRoom":"v1",
-  "%Name":"Room1",
+  "%Name":"rm_gacha",
   "creationCodeFile":"",
   "inheritCode":false,
   "inheritCreationOrder":false,
   "inheritLayers":false,
   "instanceCreationOrder":[
-    {"name":"inst_553C44F4","path":"rooms/Room1/Room1.yy",},
-    {"name":"inst_2484A46A","path":"rooms/Room1/Room1.yy",},
-    {"name":"inst_17A911B4","path":"rooms/Room1/Room1.yy",},
-    {"name":"inst_C525724","path":"rooms/Room1/Room1.yy",},
+    {"name":"inst_553C44F4","path":"rooms/rm_gacha/rm_gacha.yy",},
+    {"name":"inst_2484A46A","path":"rooms/rm_gacha/rm_gacha.yy",},
+    {"name":"inst_17A911B4","path":"rooms/rm_gacha/rm_gacha.yy",},
+    {"name":"inst_C525724","path":"rooms/rm_gacha/rm_gacha.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -25,7 +25,7 @@
       ],"layers":[],"name":"Instances","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRBackgroundLayer":"","%Name":"Background","animationFPS":15.0,"animationSpeedType":0,"colour":4291318016,"depth":100,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"hspeed":0.0,"htiled":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Background","properties":[],"resourceType":"GMRBackgroundLayer","resourceVersion":"2.0","spriteId":null,"stretch":false,"userdefinedAnimFPS":false,"userdefinedDepth":false,"visible":true,"vspeed":0.0,"vtiled":false,"x":0,"y":0,},
   ],
-  "name":"Room1",
+  "name":"rm_gacha",
   "parent":{
     "name":"Rooms",
     "path":"folders/Rooms.yy",

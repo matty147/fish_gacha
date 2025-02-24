@@ -8,7 +8,7 @@ switch (fish_rarity)
 		//shader_set_uniform_f(uni_time,current_time / 2000);
 			break;
     case rarity.ULTRA_RARE:
-        shader_set(sha_legend);
+        shader_set(sh_legend);
 
 		shader_set_uniform_f(uni_add,add);
 		shader_set_uniform_f(uni_time,current_time / 2000);

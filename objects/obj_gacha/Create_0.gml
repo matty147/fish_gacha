@@ -8,15 +8,14 @@ enum rarity {
 }
 
 normal_fish = [
-
-];
-
-common_fish = [
 "salmon",
 "trout",
 "bass",
 "catfish",
 "carp",
+];
+
+common_fish = [
 "cod",
 "mackerel",
 "perch",
@@ -47,14 +46,17 @@ ultra_rare_fish = [
 
 // roll chances
 
-roll_chance = [ 
-5000, // normal
-6000, //common
-7500, // rare
-9000, // super rare 
-9500, // super super rare 
-9990 // ultra rare
+roll_chance = [ //values are in %
+60, // normal
+80, //common
+90, // rare
+95, // super rare 
+98, // super super rare 
+99.9 // ultra rare
 ];
+
+chance_size = 1000;
+
 
 current_fish_name = "spr_bass";
 curent_fish_rarity = rarity.COMMON;
@@ -62,6 +64,7 @@ curent_fish_rarity = rarity.COMMON;
 pulls = 0;
 pulling = false;
 pull_amount = 0;
+pull_cost = 100;
 
 pitty_counter = 0;  
 

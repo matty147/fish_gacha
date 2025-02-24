@@ -1,0 +1,55 @@
+if  next_move_time <= 0 || keyboard_check(ord("K"))
+{
+	stopped = false;	
+	while true
+	{
+	
+		_x = random_range(fish_tank.x,fish_tank.x + fish_tank.sprite_width);
+		_y = random_range(fish_tank.y,fish_tank.y + fish_tank.sprite_height);
+		move_time = random_range(0.1,5);
+		
+		if position_meeting(_x,_y,obj__fish_tank)
+		{
+			break;
+		}
+	}
+	next_move_time = random_range(100,1000);
+	move_direction = point_direction(x,y,_x,_y);
+}next_move_time--;
+
+show_debug_message(point_distance(x,y,_x,_y));
+
+if (point_distance(x, y, _x, _y) > 1) && !stopped
+{
+	show_debug_message("b");
+    x += lengthdir_x(1, move_direction);
+    y += lengthdir_y(1, move_direction);
+	
+	little_x = x; 
+	little_y = y;
+}else
+{
+	show_debug_message("a");
+	stopped = true;
+	little_x += random_range(-0.5,0.5);
+	little_y += random_range(-0.5,0.5);
+	
+	if (point_distance(x, y, _x, _y) > 1)
+	{
+		x = lerp(x,little_x,0.1);
+		y = lerp(y,little_y,0.1);
+	}
+}
+
+
+//check if fish is outside of bounds
+if !position_meeting(x,y,obj__fish_tank)
+{
+	stopped = true;
+}
+
+if global.time % 500 == 0
+{
+
+	global.money += money_for_fish;	
+}
