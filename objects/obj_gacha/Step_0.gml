@@ -48,10 +48,10 @@ if pulls > 0 && !pulling
 		pull_amount = 1;
 	}
 	
-	if global.money >= pull_cost * pull_amount
+	if global.bait >= 1 * pull_amount
 	{
 		pulling = true;
-		global.money -= pull_cost * pull_amount;
+		global.bait -= 1 * pull_amount;
 		
 		if pull_amount > 5 
 		{

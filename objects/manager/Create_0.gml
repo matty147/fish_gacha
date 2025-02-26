@@ -1,7 +1,10 @@
 debug_log = false;
 window_set_fullscreen(true);
 
-
+if !variable_global_exists("money")
+{
+	global.bait = 0;
+}
 
 if !variable_global_exists("money")
 {

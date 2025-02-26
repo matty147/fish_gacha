@@ -56,13 +56,13 @@ switch (global.curent_scene)
 		}
 		break;
 		
-	//case 2:
-	//	if rm_shop != room
-	//	{
-	//		show_debug_message("went to shop");
-	//		//room_goto(rm_shop);
-	//	}
-	//	break;
+	case 2:
+		if rm_shop != room
+		{
+			show_debug_message("went to shop");
+			room_goto(rm_shop);
+		}
+		break;
 	
 }
 

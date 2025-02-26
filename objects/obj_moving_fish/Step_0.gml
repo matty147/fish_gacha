@@ -17,11 +17,11 @@ if  next_move_time <= 0 || keyboard_check(ord("K"))
 	move_direction = point_direction(x,y,_x,_y);
 }next_move_time--;
 
-show_debug_message(point_distance(x,y,_x,_y));
+//show_debug_message(point_distance(x,y,_x,_y));
 
 if (point_distance(x, y, _x, _y) > 1) && !stopped
 {
-	show_debug_message("b");
+	//show_debug_message("b");
     x += lengthdir_x(1, move_direction);
     y += lengthdir_y(1, move_direction);
 	
@@ -29,10 +29,23 @@ if (point_distance(x, y, _x, _y) > 1) && !stopped
 	little_y = y;
 }else
 {
-	show_debug_message("a");
+	//show_debug_message("a");
 	stopped = true;
-	little_x += random_range(-0.5,0.5);
-	little_y += random_range(-0.5,0.5);
+	
+	while (true)
+	{
+		
+		little_x += random_range(-0.5,0.5);
+		little_y += random_range(-0.5,0.5);
+		
+		show_debug_message(string(little_x) + "," + string(little_y));
+		
+		if position_meeting(x + little_x,y + little_y,obj__fish_tank)
+		{
+			break;
+		}
+		
+	}
 	
 	if (point_distance(x, y, _x, _y) > 1)
 	{
