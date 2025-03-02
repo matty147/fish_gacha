@@ -8,7 +8,7 @@ if  next_move_time <= 0 || keyboard_check(ord("K"))
 		_y = random_range(fish_tank.y,fish_tank.y + fish_tank.sprite_height);
 		move_time = random_range(0.1,5);
 		
-		if position_meeting(_x,_y,obj__fish_tank)
+		if position_meeting(_x,_y,obj_fish_tank)
 		{
 			break;
 		}
@@ -32,20 +32,20 @@ if (point_distance(x, y, _x, _y) > 1) && !stopped
 	//show_debug_message("a");
 	stopped = true;
 	
-	while (true)
-	{
+	//while (true)
+	//{
 		
 		little_x += random_range(-0.5,0.5);
 		little_y += random_range(-0.5,0.5);
 		
-		show_debug_message(string(little_x) + "," + string(little_y));
+		//show_debug_message(string(little_x) + " , " + string(little_y));
 		
-		if position_meeting(x + little_x,y + little_y,obj__fish_tank)
-		{
-			break;
-		}
+	//	if position_meeting(x + little_x,y + little_y,obj_fish_tank)
+	//	{
+	//		break;
+	//	}
 		
-	}
+	//}
 	
 	if (point_distance(x, y, _x, _y) > 1)
 	{
@@ -56,7 +56,7 @@ if (point_distance(x, y, _x, _y) > 1) && !stopped
 
 
 //check if fish is outside of bounds
-if !position_meeting(x,y,obj__fish_tank)
+if !position_meeting(x,y,obj_fish_tank)
 {
 	stopped = true;
 }

@@ -13,10 +13,23 @@ switch button_type
 	case 1:
 		if keyboard_check(vk_enter) || position_meeting(mouse_x,mouse_y,id) && mouse_check_button_pressed(mb_left)
 		{
-			if global.money >= 0
-			{
-				global.money++;
-			}
+			show_upgrades = true
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
 		}
 	
 	

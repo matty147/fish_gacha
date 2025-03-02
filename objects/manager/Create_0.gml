@@ -3,12 +3,12 @@ window_set_fullscreen(true);
 
 if !variable_global_exists("money")
 {
-	global.bait = 0;
+	global.bait = 9999;
 }
 
 if !variable_global_exists("money")
 {
-	global.money = 100;
+	global.money = 9999999;
 }
 
 if !variable_global_exists("time")
@@ -20,6 +20,11 @@ if !variable_global_exists("curent_scene")
 {
 	show_debug_message("set");
 	global.curent_scene = 0;
+}
+
+if !variable_global_exists("fish_cought")
+{
+	global.fish_cought = [];	
 }
 
 numb_of_scenes = 2

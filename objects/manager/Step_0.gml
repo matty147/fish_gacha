@@ -9,6 +9,11 @@ if keyboard_check_pressed(ord("R"))
 	game_restart();
 }
 
+if keyboard_check_pressed(ord("L"))
+{
+	show_debug_message(global.fish_cought);
+}
+
 show_debug_log(debug_log);
 
 

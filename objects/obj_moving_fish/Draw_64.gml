@@ -1,0 +1,1 @@
+draw_text(0,5,"x:" + string(x) + " y: " + string(y) + " distance: " + string(point_distance(x,y,_x,_y)));

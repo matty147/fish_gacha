@@ -1,6 +1,20 @@
 randomize();
 
-fish_tank = instance_find(obj__fish_tank,0);
+//move_area = 10;
+//move_angle = 60; 
+//_x = 0;
+//_y = 0;
+
+//moving = false;
+//move_direction = 0;
+//idle = 0;
+//idle_x = x;
+//idle_y = y;
+//image_xscale *= irandom_range(0,1);
+
+//if image_xscale == 0 {image_xscale = -1;}
+//if image_xscale == -1 {move_direction = -180;}
+fish_tank = instance_find(obj_fish_tank,0);
 
 
 _x = random_range(fish_tank.x,fish_tank.x + fish_tank.sprite_width);

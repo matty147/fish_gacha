@@ -32,6 +32,25 @@ function spawn_fish(your_fish, rarity,position)
 			fish.fish_rarity = rarity.ULTRA_RARE;
 				break
 		}
+		
+		
+		var found = false;
+		
+		for (var i = 0; i < array_length(global.fish_cought);i++)
+		{
+			if global.fish_cought[i][0] == your_fish
+			{
+				global.fish_cought[i][1]++;
+				show_debug_message("already exists!!! {"+ string(your_fish) + "}");
+				found = true;
+			}
+		}
+		
+		if !found
+		{
+			array_push(global.fish_cought,[your_fish,1]);
+		}
+		
 }
 
 randomize();

@@ -68,9 +68,6 @@ pull_cost = 100;
 
 pitty_counter = 0;  
 
-fish_cought = [];
-
-
 time = 0;
 
 
