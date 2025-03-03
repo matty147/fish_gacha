@@ -23,6 +23,8 @@ if !variable_global_exists("upgrade_status")
 	];
 }
 
+upgrade_price = [100,];
+
 upgrade_bars = [];
 
 
