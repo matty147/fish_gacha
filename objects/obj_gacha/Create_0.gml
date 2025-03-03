@@ -11,12 +11,27 @@ normal_fish = [
 "salmon",
 "trout",
 "bass",
+"bass",
+"bass",
+"bass",
+"bass",
+"bass",
+"bass",
+"bass",
+"bass",
+"bass",
+"bass",
+"bass",
+"bass",
+"bass",
+"bass",
 "catfish",
 "carp",
 ];
 
 common_fish = [
 "cod",
+"bass",
 "mackerel",
 "perch",
 "pike",
@@ -24,6 +39,7 @@ common_fish = [
 
 rare_fish = [
 "bluefintuna",
+"bass",
 "goldendorado",
 "arowana",
 "opah",
