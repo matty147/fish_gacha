@@ -1,12 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"obj_fish_tank",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"obj_shop_bg",
+  "eventList":[],
   "managed":true,
-  "name":"obj_fish_tank",
+  "name":"obj_shop_bg",
   "overriddenProperties":[],
   "parent":{
     "name":"Objects",
@@ -31,8 +28,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_fish_tank",
-    "path":"sprites/spr_fish_tank/spr_fish_tank.yy",
+    "name":"spr_shop_bg",
+    "path":"sprites/spr_shop_bg/spr_shop_bg.yy",
   },
   "spriteMaskId":null,
   "visible":true,

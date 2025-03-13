@@ -32,6 +32,7 @@
     {"$GMObjectProperty":"v1","%Name":"button_type","filters":[],"listItems":[],"multiselect":false,"name":"button_type","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":1,},
     {"$GMObjectProperty":"v1","%Name":"max_upgrades","filters":[],"listItems":[],"multiselect":false,"name":"max_upgrades","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":1,},
     {"$GMObjectProperty":"v1","%Name":"upgrade_type","filters":[],"listItems":[],"multiselect":false,"name":"upgrade_type","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":1,},
+    {"$GMObjectProperty":"v1","%Name":"button_title","filters":[],"listItems":[],"multiselect":false,"name":"button_title","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"Temp","varType":2,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",

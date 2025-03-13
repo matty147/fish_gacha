@@ -3,12 +3,12 @@ window_set_fullscreen(true);
 
 if !variable_global_exists("money")
 {
-	global.bait = 9999;
+	global.bait = 999999;
 }
 
 if !variable_global_exists("money")
 {
-	global.money = 9999999;
+	global.money = 99999999999999;
 }
 
 if !variable_global_exists("time")
