@@ -10,8 +10,8 @@
   "name":"obj_fish",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"gacha",
+    "path":"folders/Objects/gacha.yy",
   },
   "parentObjectId":null,
   "persistent":false,

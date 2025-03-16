@@ -26,7 +26,7 @@
   "origin":4,
   "parent":{
     "name":"legend",
-    "path":"folders/Sprites/legend.yy",
+    "path":"folders/Sprites/fish/legend.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

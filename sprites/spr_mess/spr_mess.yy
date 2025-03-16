@@ -28,8 +28,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"Sprites",
-    "path":"folders/Sprites.yy",
+    "name":"fish_tank",
+    "path":"folders/Sprites/fish_tank.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

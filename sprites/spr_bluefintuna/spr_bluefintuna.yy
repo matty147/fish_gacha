@@ -26,7 +26,7 @@
   "origin":4,
   "parent":{
     "name":"rare",
-    "path":"folders/Sprites/rare.yy",
+    "path":"folders/Sprites/fish/rare.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

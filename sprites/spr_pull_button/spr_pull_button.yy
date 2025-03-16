@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"Sprites",
-    "path":"folders/Sprites.yy",
+    "name":"gacha",
+    "path":"folders/Sprites/gacha.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

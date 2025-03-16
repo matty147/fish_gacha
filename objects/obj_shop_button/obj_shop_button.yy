@@ -11,8 +11,8 @@
   "name":"obj_shop_button",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"shop",
+    "path":"folders/Objects/shop.yy",
   },
   "parentObjectId":null,
   "persistent":false,

@@ -26,7 +26,7 @@
   "origin":0,
   "parent":{
     "name":"Rating",
-    "path":"folders/Sprites/Rating.yy",
+    "path":"folders/Sprites/fish/Rating.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

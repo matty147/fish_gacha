@@ -1,16 +1,17 @@
 {
   "$GMObject":"",
-  "%Name":"obj_upgrade_bar",
+  "%Name":"obj_fish_list_fish",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_upgrade_bar",
+  "name":"obj_fish_list_fish",
   "overriddenProperties":[],
   "parent":{
-    "name":"shop",
-    "path":"folders/Objects/shop.yy",
+    "name":"fish_tank",
+    "path":"folders/Objects/fish_tank.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -31,8 +32,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_upgrade_bar",
-    "path":"sprites/spr_upgrade_bar/spr_upgrade_bar.yy",
+    "name":"spr_shop_bg",
+    "path":"sprites/spr_shop_bg/spr_shop_bg.yy",
   },
   "spriteMaskId":null,
   "visible":true,

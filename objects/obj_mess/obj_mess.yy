@@ -8,8 +8,8 @@
   "name":"obj_mess",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"fish_tank",
+    "path":"folders/Objects/fish_tank.yy",
   },
   "parentObjectId":null,
   "persistent":false,

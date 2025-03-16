@@ -26,7 +26,7 @@
   "origin":4,
   "parent":{
     "name":"common",
-    "path":"folders/Sprites/common.yy",
+    "path":"folders/Sprites/fish/common.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

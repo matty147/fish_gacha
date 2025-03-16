@@ -7,5 +7,5 @@ if global.time % 1000 == 0
 	//var position_x = 500;
 	//var position_y = 500;
 
-	instance_create_layer(position_x,position_y,"mess",obj_mess);
+	//instance_create_layer(position_x,position_y,"mess",obj_mess);
 }

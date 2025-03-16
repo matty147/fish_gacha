@@ -26,7 +26,7 @@
   "origin":4,
   "parent":{
     "name":"shop_icons",
-    "path":"folders/Sprites/shop_icons.yy",
+    "path":"folders/Sprites/shop/shop_icons.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
