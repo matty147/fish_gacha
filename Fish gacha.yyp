@@ -82,6 +82,7 @@
     {"id":{"name":"spr_fishing_rod","path":"sprites/spr_fishing_rod/spr_fishing_rod.yy",},},
     {"id":{"name":"spr_goldendorado","path":"sprites/spr_goldendorado/spr_goldendorado.yy",},},
     {"id":{"name":"spr_herring","path":"sprites/spr_herring/spr_herring.yy",},},
+    {"id":{"name":"spr_like","path":"sprites/spr_like/spr_like.yy",},},
     {"id":{"name":"spr_mackerel","path":"sprites/spr_mackerel/spr_mackerel.yy",},},
     {"id":{"name":"spr_mess","path":"sprites/spr_mess/spr_mess.yy",},},
     {"id":{"name":"spr_n","path":"sprites/spr_n/spr_n.yy",},},
