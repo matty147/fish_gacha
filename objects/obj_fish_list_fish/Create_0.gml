@@ -6,4 +6,4 @@ like = ["banana","tropical"];
 no_like = ["other fish"];
 weight = 120;
 grid_size = "4x2";
-_rarity = "C";
+_rarity = "c";

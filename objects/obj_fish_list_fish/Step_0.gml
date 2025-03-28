@@ -1,2 +1,2 @@
 x = fish_list.x + fish_list.sprite_width / 2 - sprite_width / 2;
-//y = fish_list.y;
+y = fish_list.y + fish_list.y;
