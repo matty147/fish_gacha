@@ -14,7 +14,7 @@ if hidden
 	y = lerp(y,move_y,0.1);
 }
 
-curent_scroll_height += (mouse_wheel_up() - mouse_wheel_down()) * 2;
+curent_scroll_height += (mouse_wheel_up() - mouse_wheel_down()) * 15;
 
 //show_debug_message("cur scroll h: " + string(curent_scroll_height));
 
@@ -23,6 +23,5 @@ if curent_scroll_height < 0
 	curent_scroll_height = 0;		
 }else if curent_scroll_height > max_scroll_height
 {
-	show_debug_message("should stop scrolling");
 	curent_scroll_height = max_scroll_height;
 }

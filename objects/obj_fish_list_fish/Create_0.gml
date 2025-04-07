@@ -7,7 +7,7 @@ fish_list = instance_find(obj_fish_list,0);
 
 text_size = 1;
 
-description = "";
+//description = "aaaaaaaaaaaaaaaaaaaaaaa";
 like = ["banana","tropical"];
 no_like = ["other fish"];
 weight = 120;
