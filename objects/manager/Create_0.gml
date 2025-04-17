@@ -54,7 +54,7 @@ fish_type_list = [
         ["insects", "smaller fish"],
         150,
         "5x2",
-        "b"
+        "n"
     ],
     [
         "Perch",
@@ -72,7 +72,7 @@ fish_type_list = [
         ["algae", "plankton"],
         60,
         "2x1",
-        "d"
+        "r"
     ],
     [
         "Tuna",
@@ -81,7 +81,7 @@ fish_type_list = [
         ["smaller fish", "squid"],
         300,
         "6x3",
-        "a"
+        "sr"
     ],
     [
         "Anglerfish",
@@ -90,7 +90,7 @@ fish_type_list = [
         ["fish", "crustaceans"],
         250,
         "4x3",
-        "b"
+        "ssr"
     ],
     [
         "Goldfish",
@@ -99,7 +99,7 @@ fish_type_list = [
         ["flakes", "algae"],
         20,
         "2x1",
-        "e"
+        "ur"
     ],
     [
         "Shark",
@@ -108,7 +108,7 @@ fish_type_list = [
         ["fish", "seals"],
         500,
         "8x4",
-        "s"
+        "ur"
     ],
     [
         "Swordfish",
@@ -117,7 +117,7 @@ fish_type_list = [
         ["fish", "squid"],
         400,
         "7x3",
-        "a"
+        "sr"
     ],
     [
         "Catfish",

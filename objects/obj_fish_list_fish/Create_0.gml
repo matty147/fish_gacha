@@ -1,4 +1,5 @@
 display_fish = "bass";
+name = "Bass"
 fish_list = id;
 
 starting_y = y;
