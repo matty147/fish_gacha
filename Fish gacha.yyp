@@ -48,6 +48,7 @@
   "resources":[
     {"id":{"name":"fnt_main","path":"fonts/fnt_main/fnt_main.yy",},},
     {"id":{"name":"manager","path":"objects/manager/manager.yy",},},
+    {"id":{"name":"obj_fish_button","path":"objects/obj_fish_button/obj_fish_button.yy",},},
     {"id":{"name":"obj_fish_list_fish","path":"objects/obj_fish_list_fish/obj_fish_list_fish.yy",},},
     {"id":{"name":"obj_fish_list","path":"objects/obj_fish_list/obj_fish_list.yy",},},
     {"id":{"name":"obj_fish_logic","path":"objects/obj_fish_logic/obj_fish_logic.yy",},},
@@ -83,6 +84,7 @@
     {"id":{"name":"spr_goldendorado","path":"sprites/spr_goldendorado/spr_goldendorado.yy",},},
     {"id":{"name":"spr_herring","path":"sprites/spr_herring/spr_herring.yy",},},
     {"id":{"name":"spr_like","path":"sprites/spr_like/spr_like.yy",},},
+    {"id":{"name":"spr_list_button","path":"sprites/spr_list_button/spr_list_button.yy",},},
     {"id":{"name":"spr_mackerel","path":"sprites/spr_mackerel/spr_mackerel.yy",},},
     {"id":{"name":"spr_mess","path":"sprites/spr_mess/spr_mess.yy",},},
     {"id":{"name":"spr_n","path":"sprites/spr_n/spr_n.yy",},},
@@ -99,6 +101,7 @@
     {"id":{"name":"spr_sr","path":"sprites/spr_sr/spr_sr.yy",},},
     {"id":{"name":"spr_ssr","path":"sprites/spr_ssr/spr_ssr.yy",},},
     {"id":{"name":"spr_strength","path":"sprites/spr_strength/spr_strength.yy",},},
+    {"id":{"name":"spr_temp","path":"sprites/spr_temp/spr_temp.yy",},},
     {"id":{"name":"spr_trout","path":"sprites/spr_trout/spr_trout.yy",},},
     {"id":{"name":"spr_upgrade_bar","path":"sprites/spr_upgrade_bar/spr_upgrade_bar.yy",},},
     {"id":{"name":"spr_ur","path":"sprites/spr_ur/spr_ur.yy",},},

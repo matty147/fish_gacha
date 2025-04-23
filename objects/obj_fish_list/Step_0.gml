@@ -1,7 +1,7 @@
-if keyboard_check_pressed(ord("H"))
-{
-	hidden = !hidden;
-}
+//if keyboard_check_pressed(ord("H"))
+//{
+//	hidden = !hidden;
+//}
 
 if hidden
 {

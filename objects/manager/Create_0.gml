@@ -75,8 +75,8 @@ fish_type_list = [
         "r"
     ],
     [
-        "Tuna",
-        "tuna",
+        "Opah",
+        "opah",
         ["fast", "deep sea"],
         ["smaller fish", "squid"],
         300,
@@ -84,8 +84,8 @@ fish_type_list = [
         "sr"
     ],
     [
-        "Anglerfish",
-        "anglerfish",
+        "Goldendorado",
+        "goldendorado",
         ["deep", "scary"],
         ["fish", "crustaceans"],
         250,
@@ -93,8 +93,8 @@ fish_type_list = [
         "ssr"
     ],
     [
-        "Goldfish",
-        "goldfish",
+        "Coelacanth",
+        "coelacanth",
         ["pond", "cute"],
         ["flakes", "algae"],
         20,
@@ -102,8 +102,8 @@ fish_type_list = [
         "ur"
     ],
     [
-        "Shark",
-        "shark",
+        "Oarfish",
+        "oarfish",
         ["predator", "ocean"],
         ["fish", "seals"],
         500,
@@ -111,8 +111,8 @@ fish_type_list = [
         "ur"
     ],
     [
-        "Swordfish",
-        "swordfish",
+        "Coelacanth",
+        "coelacanth",
         ["sharp", "fast"],
         ["fish", "squid"],
         400,

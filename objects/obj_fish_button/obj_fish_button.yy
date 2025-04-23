@@ -1,13 +1,12 @@
 {
   "$GMObject":"",
-  "%Name":"obj_moving_fish",
+  "%Name":"obj_fish_button",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":64,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_moving_fish",
+  "name":"obj_fish_button",
   "overriddenProperties":[],
   "parent":{
     "name":"fish_tank",
@@ -27,13 +26,15 @@
   "physicsShape":1,
   "physicsShapePoints":[],
   "physicsStartAwake":true,
-  "properties":[],
+  "properties":[
+    {"$GMObjectProperty":"v1","%Name":"display_sprite","filters":[],"listItems":[],"multiselect":false,"name":"display_sprite","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":1,},
+  ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_temp",
-    "path":"sprites/spr_temp/spr_temp.yy",
+    "name":"spr_list_button",
+    "path":"sprites/spr_list_button/spr_list_button.yy",
   },
   "spriteMaskId":null,
   "visible":true,
