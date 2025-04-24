@@ -3,7 +3,7 @@
 //	hidden = !hidden;
 //}
 
-if hidden
+if (_manager.hidden_your_fish && list_type == 0) || (_manager.hidden_fishtiary && list_type == 1) || (_manager.hidden_warnings && list_type == 2)
 {
 	x = lerp(x,start_position_x,0.1);
 	y = lerp(y,start_position_y,0.1);

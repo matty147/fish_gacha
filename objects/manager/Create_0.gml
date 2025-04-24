@@ -29,6 +29,10 @@ if !variable_global_exists("fish_cought")
 
 numb_of_scenes = 2;
 
+hidden_your_fish = true;
+hidden_fishtiary = true;
+hidden_warnings = true;
+
 //display_name = "";
 //sprite_name = "";
 //like = ["banana","tropical"];

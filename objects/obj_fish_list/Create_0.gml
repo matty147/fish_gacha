@@ -4,13 +4,15 @@ start_position_y = y;
 move_x = room_width - sprite_width;
 move_y = y;
 
-hidden = true ;
+hidden = true;
 
 show_debug_message(array_length(global.fish_cought));
 
 max_scroll_height = 0;
 
 _manager = instance_find(manager,0);
+
+curent_scroll_height = 0;
 
 if list_type == 0
 {
@@ -67,7 +69,6 @@ if list_type == 0
 	}
 
 	//show_debug_message(max_scroll_height);
-	curent_scroll_height = 0;
 }else if list_type == 1
 {
 	
