@@ -72,4 +72,7 @@ switch (global.curent_scene)
 
 global.time++;
 
-
+if keyboard_check_pressed(ord("G"))
+{
+	show_debug_message(global.fish_cought);
+}

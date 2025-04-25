@@ -14,6 +14,10 @@ _manager = instance_find(manager,0);
 
 curent_scroll_height = 0;
 
+fish_list_depth = layer_get_depth("fish_list");
+
+show_debug_message("my depth: " + string(depth));
+
 if list_type == 0
 {
 	for (var i = 0;i < array_length(global.fish_cought);i++)
@@ -71,7 +75,45 @@ if list_type == 0
 	//show_debug_message(max_scroll_height);
 }else if list_type == 1
 {
+	for (var i = 0;i < array_length(global.fish_cought);i++)
+	{
+		var fish_id = 0;
 	
+		for (var j = 0; j < array_length(_manager.fish_type_list);j++)
+		{
+			//show_debug_message("fish: " + string(global.fish_cought[i][0]) + " vs " +  string(_manager.fish_type_list[j][1]));
+			if string(global.fish_cought[i][0]) == string(_manager.fish_type_list[j][1])
+			{
+				//show_debug_message("found fish: " + string(global.fish_cought[i]));
+				fish_id = j;
+				break;
+			}
+			fish_id = -1;
+		}
+		
+		if fish_id != -1
+		{
+			fish = instance_create_layer(x + sprite_width / 2,y + 15,"fish_list",obj_your_fish);
+			fish.depth = depth - 1;
+			fish.image_xscale = 4;
+			fish.image_yscale = 3.5;
+			fish.y += (fish.sprite_height + 30) * i;
+			fish.starting_y = fish.y;
+			fish.fish_list = id;
+			fish.depth = depth - 1;
+	
+			var your_fish = global.fish_cought[j];
+			
+			fish.fish_name = _manager.fish_type_list[fish_id][1];
+			fish.display_fish = _manager.fish_type_list[fish_id][1];
+			fish.amount = your_fish[1];
+	
+			max_scroll_height = (fish.sprite_height + 30) * (i - 2);
+			
+		}
+		
+		
+	}
 	
 }else if list_type == 2
 {
