@@ -21,11 +21,20 @@ if grabbing{
 	
 		if position_meeting(instance.x,instance.y,obj_fish_tank)
 		{
-			
+			if global.fish_cought[numb_in_fish_table][1] > global.fish_cought[numb_in_fish_table][2]
+			{
+				show_debug_message("fish_name: " + string(global.fish_cought[numb_in_fish_table][0]));
+				show_debug_message("amount - used: " + string(global.fish_cought[numb_in_fish_table][1] - global.fish_cought[numb_in_fish_table][2]));
+				
+				global.fish_cought[numb_in_fish_table][2]++;
+				
+				instance.numb_in_fish_table = numb_in_fish_table;
+				
+			}else instance_destroy(instance);
 		}else instance_destroy(instance);
 	} 
 
 }
 
-show_debug_message("x: " + string(x));
-show_debug_message("y: " + string(y));
+//show_debug_message("x: " + string(x));
+//show_debug_message("y: " + string(y));

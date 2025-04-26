@@ -101,15 +101,15 @@ if list_type == 0
 			fish.starting_y = fish.y;
 			fish.fish_list = id;
 			fish.depth = depth - 1;
+			fish.numb_in_fish_table = i;
 	
-			var your_fish = global.fish_cought[j];
+			var your_fish = global.fish_cought[i];
 			
 			fish.fish_name = _manager.fish_type_list[fish_id][1];
 			fish.display_fish = _manager.fish_type_list[fish_id][1];
 			fish.amount = your_fish[1];
 	
 			max_scroll_height = (fish.sprite_height + 30) * (i - 2);
-			
 		}
 		
 		

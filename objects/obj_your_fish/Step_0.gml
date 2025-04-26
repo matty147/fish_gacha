@@ -1,3 +1,12 @@
+if set_up
+{
+
+	grab_fish.numb_in_fish_table = numb_in_fish_table;	
+	
+	set_up = false;
+}
+
+
 x = fish_list.x + fish_list.sprite_width / 2 - sprite_width / 2;
 y = starting_y - fish_list.curent_scroll_height;
 depth = fish_list.depth - 1;

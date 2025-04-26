@@ -6,6 +6,7 @@ _manager = instance_find(manager,0);
 display_text = false;
 
 text_size = 1;
+numb_in_fish_table = 0;
 
 display_fish = "Carp";
 fish_name = "carp";
@@ -15,5 +16,7 @@ grab_fish = instance_create_layer(x + sprite_width / 2,y + sprite_height / 2,"fi
 grab_fish.fish_name = "carp";
 grab_fish.image_xscale = 2;
 grab_fish.image_yscale = 2;
+
+set_up = true;
 
 

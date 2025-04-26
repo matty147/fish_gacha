@@ -20,7 +20,5 @@ if display_text
 
 	//draw_text_transformed_color(x + sprite_width * 1/6, y,"Name",1,1,0,c_white,c_white,c_white,c_white,1);
 	draw_text_ext_transformed_color(x + sprite_width / 2,y + 5,display_fish,0,500,text_size,text_size,0,c_white,c_white,c_white,c_white,1);
-	
-	draw_text_ext_transformed_color(x + sprite_width / 2,y + sprite_height * 3/4 + 10,string(amount) + "x",0,500,text_size,text_size,0,c_white,c_white,c_white,c_white,1);
-	
+	draw_text_ext_transformed_color(x + sprite_width / 2,y + sprite_height * 3/4 + 10,string(amount - global.fish_cought[numb_in_fish_table][2]) + "x",0,500,text_size,text_size,0,c_white,c_white,c_white,c_white,1);	
 }

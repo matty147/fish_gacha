@@ -30,3 +30,8 @@ stopped = false;
 
 money_for_fish = 2.5;
 
+parrents_name = "carp";
+
+numb_in_fish_table = 0;
+
+grabbing = false;

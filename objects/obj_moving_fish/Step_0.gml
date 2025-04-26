@@ -66,3 +66,27 @@ if global.time % 500 == 0
 
 	global.money += money_for_fish;	
 }
+
+if mouse_check_button_pressed(mb_left) && position_meeting(mouse_x,mouse_y,id)
+{
+	grabbing = true;
+}
+
+if mouse_check_button_released(mb_left)
+{
+	grabbing = false;
+	
+	if position_meeting(x,y,obj_fish_list)
+	{
+		global.fish_cought[numb_in_fish_table][2]--;
+		instance_destroy();	
+	}
+}
+
+if grabbing
+{
+	depth = layer_get_depth("fish_list") - 100;
+	x = mouse_x;	
+	y = mouse_y;	
+}else depth = layer_get_depth("fish");
+

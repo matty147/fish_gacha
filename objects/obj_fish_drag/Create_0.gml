@@ -18,5 +18,6 @@ sprite_name = "spr_" + fish_name;
 	
 sprite_index = asset_get_index(sprite_name);
 display_sprite_size = 1;
+numb_in_fish_table = 1;
 image_xscale = display_sprite_size;
 image_yscale = display_sprite_size;

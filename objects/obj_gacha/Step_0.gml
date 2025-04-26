@@ -48,7 +48,8 @@ function spawn_fish(your_fish, rarity,position)
 		
 		if !found
 		{
-			array_push(global.fish_cought,[your_fish,1]);
+			//name,count,in_fish_tank
+			array_push(global.fish_cought,[your_fish,1,0]);
 		}
 		
 }
