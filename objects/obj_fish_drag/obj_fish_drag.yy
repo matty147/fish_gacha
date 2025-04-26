@@ -1,9 +1,12 @@
 {
   "$GMObject":"",
-  "%Name":"obj_selector_bg",
-  "eventList":[],
+  "%Name":"obj_fish_drag",
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
-  "name":"obj_selector_bg",
+  "name":"obj_fish_drag",
   "overriddenProperties":[],
   "parent":{
     "name":"fish_tank",
@@ -27,7 +30,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"spr_fish_drag",
+    "path":"sprites/spr_fish_drag/spr_fish_drag.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }
