@@ -15,6 +15,7 @@ randomize();
 //if image_xscale == 0 {image_xscale = -1;}
 //if image_xscale == -1 {move_direction = -180;}
 fish_tank = instance_find(obj_fish_tank,0);
+_manager = instance_find(manager,0);
 
 
 _x = random_range(fish_tank.x,fish_tank.x + fish_tank.sprite_width);
@@ -35,3 +36,6 @@ parrents_name = "carp";
 numb_in_fish_table = 0;
 
 grabbing = false;
+
+last_valid_xpos = x;
+last_valid_ypos = y;

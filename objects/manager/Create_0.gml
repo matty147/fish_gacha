@@ -33,6 +33,7 @@ hidden_your_fish = true;
 hidden_fishtiary = true;
 hidden_warnings = true;
 
+grabbing_fish = false;
 //display_name = "";
 //sprite_name = "";
 //like = ["banana","tropical"];

@@ -67,19 +67,28 @@ if global.time % 500 == 0
 	global.money += money_for_fish;	
 }
 
-if mouse_check_button_pressed(mb_left) && position_meeting(mouse_x,mouse_y,id)
+if mouse_check_button_pressed(mb_left) && position_meeting(mouse_x,mouse_y,id) && !_manager.grabbing_fish
 {
+	_manager.grabbing_fish = true;
 	grabbing = true;
+	last_valid_xpos = x;
+	last_valid_ypos = y;
 }
 
-if mouse_check_button_released(mb_left)
+if mouse_check_button_released(mb_left) && grabbing
 {
+	_manager.grabbing_fish = false;
 	grabbing = false;
+	next_move_time = 0;
 	
 	if position_meeting(x,y,obj_fish_list)
 	{
 		global.fish_cought[numb_in_fish_table][2]--;
 		instance_destroy();	
+	}else if !position_meeting(x,y,obj_fish_tank)
+	{
+		x = last_valid_xpos;
+		y = last_valid_ypos;	
 	}
 }
 
