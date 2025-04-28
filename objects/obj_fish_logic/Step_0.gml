@@ -11,7 +11,7 @@ if room == rm_fishtank
 				//show_debug_message(string(global.fish_cought[v][0]) + " vs " + string(global.fish_deployed[f][0]));
 				if global.fish_cought[v][0] == global.fish_deployed[f][0]
 				{
-					if global.fish_deployed[f][1] > 0
+					for (var i = 0; global.fish_deployed[f][1] > i;i++)
 					{
 						var fish = instance_create_layer(500,500,"fish",obj_moving_fish);			
 						fish.numb_in_fish_table = v;
