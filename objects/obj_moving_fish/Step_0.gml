@@ -84,6 +84,22 @@ if mouse_check_button_released(mb_left) && grabbing
 	if position_meeting(x,y,obj_fish_list)
 	{
 		global.fish_cought[numb_in_fish_table][2]--;
+
+		for (var v = 0; v < array_length(global.fish_deployed);v++)
+		{
+			//show_debug_message(string(global.fish_cought[v][0]) + " vs " + string(global.fish_deployed[f][0]));
+			if global.fish_deployed[v][0] == global.fish_cought[numb_in_fish_table][0]
+			{
+				//show_debug_message("fish deleted");
+				//show_debug_message(global.fish_cought[numb_in_fish_table][0]);
+				//show_debug_message(global.fish_deployed);
+				//show_debug_message("v: " + string(v));
+				show_debug_message("del fish: " + string(global.fish_deployed[v][0]));
+				global.fish_deployed[v][1]--;
+				break;
+			}
+		}
+
 		instance_destroy();	
 	}else if !position_meeting(x,y,obj_fish_tank)
 	{

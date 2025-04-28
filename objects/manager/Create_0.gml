@@ -27,6 +27,11 @@ if !variable_global_exists("fish_cought")
 	global.fish_cought = [];	
 }
 
+if !variable_global_exists("fish_deployed")
+{
+	global.fish_deployed = [];	
+}
+
 numb_of_scenes = 2;
 
 hidden_your_fish = true;

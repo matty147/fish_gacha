@@ -76,3 +76,7 @@ if keyboard_check_pressed(ord("G"))
 {
 	show_debug_message(global.fish_cought);
 }
+if keyboard_check_pressed(ord("F"))
+{
+	show_debug_message(global.fish_deployed);
+}
