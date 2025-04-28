@@ -1,5 +1,7 @@
 randomize();
 
+image_blend = make_color_rgb(irandom(255),irandom(255),irandom(255));
+
 //move_area = 10;
 //move_angle = 60; 
 //_x = 0;
