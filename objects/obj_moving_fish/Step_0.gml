@@ -115,3 +115,32 @@ if grabbing
 	y = mouse_y;	
 }else depth = layer_get_depth("fish");
 
+if limit_crowd
+{
+	if too_crowded(crowded_limit)
+	{
+		show_debug_message("crowded");	
+	}
+}
+
+if limit_crowd && too_crowded(crowded_limit)
+{
+		show_debug_message("crowded");	
+}
+
+if is_racist && racist(numb_in_fish_table)
+{
+	show_debug_message("racist");
+}
+
+if attack && atack_fish(attack_at_fish) && fish_name != attack_at_fish
+{
+	show_debug_message("attacking")
+}
+
+if attack_size && attack_smaller_fish(fish_size)
+{
+	
+	show_debug_message("smaller");
+	
+}

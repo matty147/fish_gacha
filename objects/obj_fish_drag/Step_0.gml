@@ -28,8 +28,9 @@ if grabbing{
 				global.fish_cought[numb_in_fish_table][2]++;
 				
 				instance.numb_in_fish_table = numb_in_fish_table;
+				instance.fish_name = global.fish_cought[numb_in_fish_table][0];
 				var already_exists = false;
-				var fish_id = 0; 
+				var fish_id = 0;
 				
 				for (var f = 0; f < array_length(global.fish_deployed);f++)
 				{
@@ -41,6 +42,7 @@ if grabbing{
 						show_debug_message("i exist");
 						already_exists = true;
 						fish_id = f;
+						
 						show_debug_message("f: " + string(f));
 						break;
 					}

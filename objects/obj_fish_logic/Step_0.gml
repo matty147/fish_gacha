@@ -15,6 +15,8 @@ if room == rm_fishtank
 					{
 						var fish = instance_create_layer(500,500,"fish",obj_moving_fish);			
 						fish.numb_in_fish_table = v;
+						fish.fish_name = global.fish_cought[v][0];
+						//fish.fish_size = _manager.fish_type_list[p][4]; // find this in the _manager.fish_type_list;
 						//show_debug_message("this is the fucker your looking for!!!");
 					}
 				}
