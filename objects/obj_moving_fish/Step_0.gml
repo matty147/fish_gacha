@@ -114,3 +114,4 @@ if grabbing
 	x = mouse_x;	
 	y = mouse_y;	
 }else depth = layer_get_depth("fish");
+

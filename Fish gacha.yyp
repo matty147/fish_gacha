@@ -66,6 +66,7 @@
     {"id":{"name":"rm_fishtank","path":"rooms/rm_fishtank/rm_fishtank.yy",},},
     {"id":{"name":"rm_gacha","path":"rooms/rm_gacha/rm_gacha.yy",},},
     {"id":{"name":"rm_shop","path":"rooms/rm_shop/rm_shop.yy",},},
+    {"id":{"name":"scr_fish_conditions","path":"scripts/scr_fish_conditions/scr_fish_conditions.yy",},},
     {"id":{"name":"sh_gloss","path":"shaders/sh_gloss/sh_gloss.yy",},},
     {"id":{"name":"sh_legend","path":"shaders/sh_legend/sh_legend.yy",},},
     {"id":{"name":"spr_arowana","path":"sprites/spr_arowana/spr_arowana.yy",},},
