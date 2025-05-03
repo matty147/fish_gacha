@@ -1,65 +1,52 @@
-if  next_move_time <= 0 || keyboard_check(ord("K"))
+if pause < 0
 {
-	stopped = false;	
-	while true
+
+	if distance_to_point(desired_x,desired_y) < 10
 	{
+		randomize();
+		var rand = irandom_range(0,5);
+		//show_debug_message("rand: " + string(rand));
 	
-		_x = random_range(fish_tank.x,fish_tank.x + fish_tank.sprite_width);
-		_y = random_range(fish_tank.y,fish_tank.y + fish_tank.sprite_height);
-		move_time = random_range(0.1,5);
-		
-		if position_meeting(_x,_y,obj_fish_tank)
+		if rand  < 3 //find new location
 		{
-			break;
+			//show_debug_message("move activated");
+			_speed = random_range(0.1,2);
+			desired_x = random_range(fish_tank.bbox_left,fish_tank.bbox_right);
+			desired_y = random_range(fish_tank.bbox_top,fish_tank.bbox_bottom);
+			//show_debug_message("new x: " + string(desired_x) + " new y: " + string(desired_y));
+			//show_debug_message("x: " + string(x) + " y: " + string(y));
 		}
+		
+		if rand > 3 && rand < 5 //take a break
+		{
+			pause = random_range(1 * fps,3 *  fps);
+			_speed = 0;
+			desired_x = x;
+			desired_y = y;
+			move_towards_point(desired_x,desired_y,_speed); // have to reset the movement or else it will remain in the moving state
+			//show_debug_message("pause activated");
+		}
+		
+	}else
+	{
+		move_towards_point(desired_x,desired_y,_speed);	
 	}
-	next_move_time = random_range(100,1000);
-	move_direction = point_direction(x,y,_x,_y);
-}next_move_time--;
-
-//show_debug_message(point_distance(x,y,_x,_y));
-
-if (point_distance(x, y, _x, _y) > 1) && !stopped
-{
-	//show_debug_message("b");
-    x += lengthdir_x(1, move_direction);
-    y += lengthdir_y(1, move_direction);
 	
-	little_x = x; 
-	little_y = y;
+	if sign(desired_x - x)
+	{
+		image_xscale = 1;
+		//show_debug_message("going right");
+	}else image_xscale = -1;
+	
 }else
 {
-	//show_debug_message("a");
-	stopped = true;
-	
-	//while (true)
-	//{
-		
-		little_x += random_range(-0.5,0.5);
-		little_y += random_range(-0.5,0.5);
-		
-		//show_debug_message(string(little_x) + " , " + string(little_y));
-		
-	//	if position_meeting(x + little_x,y + little_y,obj_fish_tank)
-	//	{
-	//		break;
-	//	}
-		
-	//}
-	
-	if (point_distance(x, y, _x, _y) > 1)
-	{
-		x = lerp(x,little_x,0.1);
-		y = lerp(y,little_y,0.1);
-	}
+	pause--;
+	//show_debug_message("pause: " + string(pause));
 }
 
-
-//check if fish is outside of bounds
-if !position_meeting(x,y,obj_fish_tank)
-{
-	stopped = true;
-}
+	//randomise a movement a bit
+	x = lerp(x, x + irandom_range(-1,1),0.1);
+	y = lerp(y, y + irandom_range(-1,1),0.1);
 
 if global.time % 500 == 0
 {
@@ -73,13 +60,14 @@ if mouse_check_button_pressed(mb_left) && position_meeting(mouse_x,mouse_y,id) &
 	grabbing = true;
 	last_valid_xpos = x;
 	last_valid_ypos = y;
+	desired_x = x;
+	desired_y = y;
 }
 
 if mouse_check_button_released(mb_left) && grabbing
 {
 	_manager.grabbing_fish = false;
 	grabbing = false;
-	next_move_time = 0;
 	
 	if position_meeting(x,y,obj_fish_list)
 	{
@@ -108,39 +96,107 @@ if mouse_check_button_released(mb_left) && grabbing
 	}
 }
 
+if limit_crowd && too_crowded(crowded_limit)
+{
+	//show_debug_message("crowded");
+	if global.time % 100
+	{
+		var mult = instance_number(obj_moving_fish) - crowded_limit; //make fish die faster if there are more then the alowed limit
+		//show_debug_message(mult);
+		fish_health -= random_range(0,0.01 * mult);
+		//show_debug_message("health: " + string(fish_health));
+	}
+}
+
+if is_racist && racist(numb_in_fish_table)
+{
+//	if is_nan(racist_fish_object)
+//	{
+		var count = instance_number(obj_moving_fish);
+
+		for (var i = 0; i < count; i++)
+		{
+			var instance = instance_find(obj_moving_fish, i);
+			if instance.numb_in_fish_table != numb_in_fish_table // check if it is the same type
+			{
+				racist_fish_object = instance;
+				pause = 2;
+			}
+		}
+		
+//	}else if (point_distance(x, y, racist_fish_object.x, racist_fish_object.y) > 50)
+//	{
+//		x = lerp(x,racist_fish_object.x,0.5);	
+//		y = lerp(y,racist_fish_object.y,0.5);	
+//	}else stopped = false;
+
+	show_debug_message(racist_fish_object.fish_health);
+	if point_distance(x, y, racist_fish_object.x, racist_fish_object.y) < 50
+	{
+		//show_debug_message("attacking");
+		racist_fish_object.fish_health -= random_range(0.01,0.05);
+		//show_debug_message("health: " + string(racist_fish_object.fish_health));
+		
+		if racist_fish_object.fish_health < 0
+		{
+			racist_fish_object.killed_by_fish = true;
+			racist_fish_object = NaN;
+		}
+	}else
+	{
+		desired_x = racist_fish_object.x;
+		desired_y = racist_fish_object.y;
+		pause = -1; //always be active
+		_speed = 5;
+	}
+}
+
+if attack && attack_fish(attack_at_fish) && fish_name != attack_at_fish
+{
+	//show_debug_message("attacking");
+}
+
+if scared && atack_fish_victim(scared_type) && fish_name != attack_at_fish
+{
+	//show_debug_message("attacking"); 
+}
+
+if attack_size && attack_smaller_fish(fish_size)
+{
+	
+	//show_debug_message("smaller");
+	
+}
+
+if fish_health < 0
+{
+	if !killed_by_fish
+	{	
+		global.fish_cought[numb_in_fish_table][2]--;
+	}
+
+	for (var v = 0; v < array_length(global.fish_deployed);v++)
+	{
+		//show_debug_message(string(global.fish_cought[v][0]) + " vs " + string(global.fish_deployed[f][0]));
+		if global.fish_deployed[v][0] == global.fish_cought[numb_in_fish_table][0]
+		{
+			//show_debug_message("fish deleted");
+			//show_debug_message(global.fish_cought[numb_in_fish_table][0]);
+			//show_debug_message(global.fish_deployed);
+			//show_debug_message("v: " + string(v));
+			show_debug_message("del fish: " + string(global.fish_deployed[v][0]));
+	
+			global.fish_deployed[v][1]--;
+			
+			break;
+		}
+	}
+	instance_destroy();
+}
+
 if grabbing
 {
 	depth = layer_get_depth("fish_list") - 100;
 	x = mouse_x;	
 	y = mouse_y;	
 }else depth = layer_get_depth("fish");
-
-if limit_crowd
-{
-	if too_crowded(crowded_limit)
-	{
-		show_debug_message("crowded");	
-	}
-}
-
-if limit_crowd && too_crowded(crowded_limit)
-{
-		show_debug_message("crowded");	
-}
-
-if is_racist && racist(numb_in_fish_table)
-{
-	show_debug_message("racist");
-}
-
-if attack && atack_fish(attack_at_fish) && fish_name != attack_at_fish
-{
-	show_debug_message("attacking")
-}
-
-if attack_size && attack_smaller_fish(fish_size)
-{
-	
-	show_debug_message("smaller");
-	
-}

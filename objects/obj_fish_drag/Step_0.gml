@@ -54,6 +54,33 @@ if grabbing{
 					
 				}else global.fish_deployed[fish_id][1]++;
 				
+				var fish_type_list_id = 0 // find fish in table
+						
+				for (var k = 0; k < array_length(_manager.fish_type_list);k++)
+				{
+					if global.fish_cought[numb_in_fish_table][0] == _manager.fish_type_list[k][1]
+					{
+						fish_type_list_id = k;
+						break;
+					}
+				}
+						
+				var input = string(_manager.fish_type_list[fish_type_list_id][7]);
+				var output = [];
+						
+				for (var l = 1; l <= string_length(input); l++) { // split input into chars
+					array_push(output, real(string_char_at(input, l)));
+				}
+						
+				show_debug_message("input: " + string(input));
+				show_debug_message("output: " + string(output));
+						
+				instance.limit_crowd = output[0];
+				instance.is_racist = output[1];
+				instance.attack = output[2];
+				instance.scared = output[3];
+				instance.attack_size = output[4];
+				
 			}else instance_destroy(instance);
 		}else instance_destroy(instance);
 	} 

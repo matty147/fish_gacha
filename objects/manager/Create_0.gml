@@ -33,6 +33,11 @@ if !variable_global_exists("fish_deployed")
 	global.fish_deployed = [];	
 }
 
+if !variable_global_exists("warnings")
+{
+	global.warnings = [];	
+}
+
 numb_of_scenes = 2;
 
 hidden_your_fish = true;
@@ -40,6 +45,8 @@ hidden_fishtiary = true;
 hidden_warnings = true;
 
 grabbing_fish = false;
+
+//--------------------------------------------- display data
 //display_name = "";
 //sprite_name = "";
 //like = ["banana","tropical"];
@@ -48,15 +55,36 @@ grabbing_fish = false;
 //grid_size = "4x2";
 //_rarity = "c";
 
+//--------------------------------------------- behaviour data 7
+//turn on/off viz scripts -> fish conditions
+//too_crowded
+//racist
+//attack_fish
+//atack_fish_victim
+//attack_smaller_fish
+
+//--------------------------------------------- setting variables
+//crowded_limit = 5;
+//attack_at_fish = "cod";
+//fish_size = 5;
+
+
 fish_type_list = [
     [
-        "Bass",
-        "bass",
-        ["banana", "tropical"],
-        ["other fish"],
-        120,
-        "4x2",
-        "c"
+	//------------ display data 0-6
+        "Bass", //0
+        "bass", //1
+        ["banana", "tropical"], //2
+        ["other fish"], //3
+        120, //4
+        "4x2", //5
+        "c", //6
+		//------------ behaviour data 7-
+		10011, //7,
+		10,
+		"arowana",
+		1
+		
     ],
     [
         "Arowana",
@@ -65,7 +93,11 @@ fish_type_list = [
         ["insects", "smaller fish"],
         150,
         "5x2",
-        "n"
+        "n",
+		11100, //7,
+		10,
+		"-",
+		1
     ],
     [
         "Perch",
@@ -74,7 +106,11 @@ fish_type_list = [
         ["algae", "crustaceans"],
         80,
         "3x2",
-        "c"
+        "c",
+		10000, //7,
+		10,
+		"-",
+		1
     ],
     [
         "Cod",
@@ -83,7 +119,11 @@ fish_type_list = [
         ["algae", "plankton"],
         60,
         "2x1",
-        "r"
+        "r",
+		11100, //7,
+		10,
+		"-",
+		1
     ],
     [
         "Opah",
@@ -92,7 +132,11 @@ fish_type_list = [
         ["smaller fish", "squid"],
         300,
         "6x3",
-        "sr"
+        "sr",
+		10001, //7,
+		10,
+		"arowana",
+		100
     ],
     [
         "Goldendorado",
@@ -101,7 +145,11 @@ fish_type_list = [
         ["fish", "crustaceans"],
         250,
         "4x3",
-        "ssr"
+        "ssr",
+		11001, //7,
+		10,
+		"opah",
+		15
     ],
     [
         "Coelacanth",
@@ -110,7 +158,11 @@ fish_type_list = [
         ["flakes", "algae"],
         20,
         "2x1",
-        "ur"
+        "ur",
+		10110, //7,
+		10,
+		"goldendorado",
+		1
     ],
     [
         "Oarfish",
@@ -119,7 +171,11 @@ fish_type_list = [
         ["fish", "seals"],
         500,
         "8x4",
-        "ur"
+        "ur",
+		10101, //7,
+		10,
+		"arowana",
+		3
     ],
     [
         "Coelacanth",
@@ -128,7 +184,11 @@ fish_type_list = [
         ["fish", "squid"],
         400,
         "7x3",
-        "sr"
+        "sr",
+		10000, //7,
+		10,
+		"catfish",
+		7
     ],
     [
         "Catfish",
@@ -137,7 +197,11 @@ fish_type_list = [
         ["insects", "plants"],
         100,
         "4x2",
-        "c"
+        "c",
+		00000, //7,
+		7,
+		"oarfish",
+		5
     ]
 ];
 

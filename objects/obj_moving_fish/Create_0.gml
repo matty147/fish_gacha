@@ -16,25 +16,36 @@ image_blend = make_color_rgb(irandom(255),irandom(255),irandom(255));
 
 //if image_xscale == 0 {image_xscale = -1;}
 //if image_xscale == -1 {move_direction = -180;}
+
+//_x = random_range(fish_tank.x,fish_tank.x + fish_tank.sprite_width);
+//_y = random_range(fish_tank.y,fish_tank.y + fish_tank.sprite_height);
+//move_time = 0.1; // make min and max
+//next_move_time = random_range(0,500);
+//move_direction = random_range(0,360);
+
+//little_x = 0;
+//little_y = 0;
+
+//stopped = false;
+
+
+
 fish_tank = instance_find(obj_fish_tank,0);
 _manager = instance_find(manager,0);
 
-_x = random_range(fish_tank.x,fish_tank.x + fish_tank.sprite_width);
-_y = random_range(fish_tank.y,fish_tank.y + fish_tank.sprite_height);
-move_time = 0.1; // make min and max
-next_move_time = random_range(0,500);
-move_direction = random_range(0,360);
+desired_x = random_range(bbox_left,bbox_right);
+desired_y = random_range(bbox_top,bbox_bottom);
 
-little_x = 0;
-little_y = 0;
-
-stopped = false;
+_speed = 1;
+pause = 0;
 
 money_for_fish = 2.5;
 
 fish_name = "carp";
 
 numb_in_fish_table = 0;
+
+fish_health = 10;
 
 grabbing = false;
 
@@ -46,8 +57,16 @@ crowded_limit = 5;
 
 is_racist = false;
 
+racist_fish_object = NaN;
+
+being_attacked = false;
+killed_by_fish = false;
+
 attack = false;
 attack_at_fish = "cod";
+
+scared = false;
+scared_type = "arowana"
 
 attack_size = true;
 fish_size = 5;
