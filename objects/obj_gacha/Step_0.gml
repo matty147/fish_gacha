@@ -1,6 +1,7 @@
 function spawn_fish(your_fish, rarity,position)
 {
 		show_debug_message(your_fish);
+		show_debug_message(rarity);
 		var fish_name = "spr_" + string(your_fish);
 		var fish = instance_create_depth(position[0], position[1],0,obj_fish);
 		fish.sprite_index = asset_get_index(fish_name);
@@ -78,7 +79,7 @@ if pulls > 0 && !pulling
 			var distance_x = room_width / 6;
 		}else var distance_x = room_width / 2
 	
-		show_debug_message(distance_x);
+		//show_debug_message(distance_x);
 		var x_numb = 1;
 		var y_numb = 0;
 	
@@ -94,60 +95,69 @@ if pulls > 0 && !pulling
 	
 			var _x = distance_x * x_numb;
 		
-			show_debug_message(x_numb)
+			//show_debug_message(x_numb)
 		
 			var _y = 1;//round(pull_amount / 5);
 
 	
-			show_debug_message(y_numb + _y);
+			//show_debug_message(y_numb + _y);
 		
 			_y = room_height / (_y + y_numb + 1);
 			x_numb++;
 	
-			show_debug_message("x: " + string(_x) + " y: " + string(_y));
+			//show_debug_message("x: " + string(_x) + " y: " + string(_y));
 	
 			var position = [_x,_y]; // x,y
 	
 			var rand = random_range(1,100 * chance_size);
 
 			pitty_counter += 0.01;
-
-			if rand <= roll_chance[0]  * chance_size // normal
+			//show_debug_message(chance_size * (roll_chance[0] - global.upgrade_status[0] * 5 - global.upgrade_status[1] * 10));
+			
+			show_debug_message("rarity: "+ string(roll_chance[0] - global.upgrade_status[0] - global.upgrade_status[1] * 2));
+			show_debug_message("rarity: "+ string(roll_chance[1] - global.upgrade_status[0] - global.upgrade_status[1] * 2));
+			show_debug_message("rarity: "+ string(roll_chance[2] - global.upgrade_status[0] - global.upgrade_status[1] * 2));
+			show_debug_message("rarity: "+ string(roll_chance[4] - global.upgrade_status[0] - global.upgrade_status[1] * 2));
+			show_debug_message("rarity: "+ string(roll_chance[5] - global.upgrade_status[0] - global.upgrade_status[1] * 2));
+			
+			//remake if time ugly af
+			if rand <= chance_size * (roll_chance[0] - global.upgrade_status[0] - global.upgrade_status[1] * 2) // normal
 			{
-				var your_fish = common_fish[random_range(0,array_length(common_fish))];
-				show_debug_message("You got a fish!!!");
+				var your_fish = normal_fish[random_range(0,array_length(normal_fish))];
+				//show_debug_message("You got a fish!!!");
 				spawn_fish(your_fish, "normal",position);
 
-			}else if rand <= roll_chance[1] * chance_size // common
+			}else if rand <= chance_size * (roll_chance[1] - global.upgrade_status[0] - global.upgrade_status[1] * 2) // common
 			{
 				var your_fish = rare_fish[random_range(0,array_length(rare_fish))];
-				show_debug_message("You got a fish!!!");	
+				//show_debug_message("You got a fish!!!");	
 				spawn_fish(your_fish,"common",position);
-			}else if rand <= roll_chance[2] * chance_size // rare
+			}else if rand <= chance_size * (roll_chance[2] - global.upgrade_status[0] - global.upgrade_status[1] * 2) // rare
 			{
 				var your_fish = rare_fish[random_range(0,array_length(rare_fish))];
-				show_debug_message("You got a fish!!!");	
+				//show_debug_message("You got a fish!!!");	
 				spawn_fish(your_fish,"rare",position);
 			
-			}else if rand <= roll_chance[3] * chance_size // super rare
+			}else if rand <= chance_size * (roll_chance[3] - global.upgrade_status[0] - global.upgrade_status[1] * 2) // super rare
 			{
-				var your_fish = rare_fish[random_range(0,array_length(rare_fish))];
-				show_debug_message("You got a fish!!!");	
+				var your_fish = super_rare_fish[random_range(0,array_length(super_rare_fish))];
+				//show_debug_message("You got a fish!!!");	
 				spawn_fish(your_fish,"super_rare",position);
 			
-			}else if rand <= roll_chance[4] * chance_size // super super rare
+			}else if rand <= chance_size * (roll_chance[4] - global.upgrade_status[0] - global.upgrade_status[1] * 2) // super super rare
 			{
-				var your_fish = rare_fish[random_range(0,array_length(rare_fish))];
-				show_debug_message("You got a fish!!!");	
+				pitty_counter = 0;
+				var your_fish = super_super_rare_fish[random_range(0,array_length(super_super_rare_fish))];
+				//show_debug_message("You got a fish!!!");	
 				spawn_fish(your_fish,"super_super_rare",position);
 			
-			}else if rand <= roll_chance[5] * chance_size - pitty_counter // ultra rare
+			}else if rand >= chance_size * (roll_chance[5] - pitty_counter - global.upgrade_status[0] - global.upgrade_status[1] * 2) // ultra rare
 			{
 				pitty_counter = 0;
 				var your_fish = ultra_rare_fish[random_range(0,array_length(ultra_rare_fish))];
-				show_debug_message("You got a fish!!!");	
+				//show_debug_message("You got a fish!!!");	
 				spawn_fish(your_fish, "ultra_rare",position);
-			}
+			}else show_debug_message("no_fish " + string(rand) + "\n");
 		}
 	}
 }

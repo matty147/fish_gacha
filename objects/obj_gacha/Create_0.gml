@@ -18,26 +18,21 @@ normal_fish = [
 common_fish = [
 "cod",
 "mackerel",
-"perch",
-"pike",
-"herring"];
+"perch"];
 
 rare_fish = [
 "bluefintuna",
-"goldendorado",
-"arowana",
-"opah",
-"napoleonwrasse"];
+"goldendorado"];
 
 super_rare_fish = [
-
-
+"arowana",
+"opah",
+"napoleonwrasse"
 ];
 
 super_super_rare_fish = [
-
-
-];
+"pike",
+"herring"];
 
 ultra_rare_fish = [
 "coelacanth",
@@ -47,10 +42,10 @@ ultra_rare_fish = [
 // roll chances
 
 roll_chance = [ //values are in %
-60, // normal
-80, //common
-90, // rare
-95, // super rare 
+80, // normal
+90, //common
+95, // rare
+97, // super rare 
 98, // super super rare 
 99.9 // ultra rare
 ];

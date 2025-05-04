@@ -96,16 +96,31 @@ if mouse_check_button_released(mb_left) && grabbing
 	}
 }
 
-if limit_crowd && too_crowded(crowded_limit)
+if limit_crowd && too_crowded(crowded_limit,obj_moving_fish)
 {
 	//show_debug_message("crowded");
 	if global.time % 100
 	{
-		var mult = instance_number(obj_moving_fish) - crowded_limit; //make fish die faster if there are more then the alowed limit
+		var mult = sqrt(max(instance_number(obj_moving_fish) - crowded_limit, 0)); //make fish die faster if there are more then the alowed limit
 		//show_debug_message(mult);
 		fish_health -= random_range(0,0.01 * mult);
 		//show_debug_message("health: " + string(fish_health));
 	}
+}
+
+//show_debug_message("health: " + string(fish_health));
+if too_crowded(7,obj_mess)
+{
+	var mult = sqrt(max(instance_number(obj_mess) - 7, 0)); //make fish die faster if there are more then the alowed limit
+	show_debug_message(mult);
+	fish_health -= random_range(0.01,0.05 * mult);
+}
+
+if too_crowded(4,obj_dead_fish)
+{
+	var mult = sqrt(max(instance_number(obj_dead_fish) - 4, 0)); //make fish die faster if there are more then the alowed limit
+	show_debug_message(mult);
+	fish_health -= random_range(0.05,0.1 * mult);
 }
 
 if is_racist && racist(numb_in_fish_table)

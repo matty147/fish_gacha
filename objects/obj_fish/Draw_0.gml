@@ -1,7 +1,6 @@
 switch (fish_rarity)
 {
     case rarity.COMMON:
-        
 		//shader_set(sha_gloss);
 
 		//shader_set_uniform_f(uni_add,add);
@@ -12,6 +11,9 @@ switch (fish_rarity)
 
 		shader_set_uniform_f(uni_add,add);
 		shader_set_uniform_f(uni_time,current_time / 2000);
+			break;
+		
+			default:
 			break;
 }
 

@@ -8,10 +8,10 @@
 /// @param {int}  amount  max amount of fish in the tank
 /// @description          checks if the fishtank has to many fishs
 
-function too_crowded(amount)
+function too_crowded(amount,object)
 {
 
-	var count = instance_number(obj_moving_fish);
+	var count = instance_number(object);
 
 	return (amount < count);
 }

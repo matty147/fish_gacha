@@ -1,4 +1,3 @@
-
 debug_log = false;
 window_set_fullscreen(true);
 
@@ -41,6 +40,15 @@ if !variable_global_exists("warnings")
 if !variable_global_exists("mess")
 {
 	global.mess = [];	
+}
+
+if !variable_global_exists("upgrade_status")
+{
+	global.upgrade_status = [
+	0, //better bait
+	0, //rod
+	0 //strenght
+	];
 }
 
 numb_of_scenes = 2;

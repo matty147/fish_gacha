@@ -11,15 +11,6 @@ spr_fishing_rod,
 spr_strength
 ]
 
-if !variable_global_exists("upgrade_status")
-{
-	global.upgrade_status = [
-	0,
-	0,
-	0
-	];
-}
-
 description = [
 "Bigger chance to catch better fish",
 "Rod won't break so easily",
