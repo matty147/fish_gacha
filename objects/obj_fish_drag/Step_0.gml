@@ -81,6 +81,8 @@ if grabbing{
 				instance.scared = output[3];
 				instance.attack_size = output[4];
 				
+				instance.weight = _manager.fish_type_list[fish_type_list_id][4];
+				
 			}else instance_destroy(instance);
 		}else instance_destroy(instance);
 	} 

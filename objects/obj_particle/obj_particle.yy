@@ -1,12 +1,12 @@
 {
   "$GMObject":"",
-  "%Name":"obj_mess",
+  "%Name":"obj_particle",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_mess",
+  "name":"obj_particle",
   "overriddenProperties":[],
   "parent":{
     "name":"fish_tank",
@@ -30,10 +30,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"spr_mess",
-    "path":"sprites/spr_mess/spr_mess.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }

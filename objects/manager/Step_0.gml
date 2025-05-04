@@ -27,7 +27,7 @@ if keyboard_check_pressed(vk_left)
 
 if global.curent_scene > numb_of_scenes
 {
-	global.curent_scene = numb_of_scenes;	
+	global.curent_scene = numb_of_scenes;
 }else if global.curent_scene < 0
 {
 	global.curent_scene = 0;

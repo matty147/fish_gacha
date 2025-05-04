@@ -130,7 +130,7 @@ if is_racist && racist(numb_in_fish_table)
 //		y = lerp(y,racist_fish_object.y,0.5);	
 //	}else stopped = false;
 
-	show_debug_message(racist_fish_object.fish_health);
+	//show_debug_message(racist_fish_object.fish_health);
 	if point_distance(x, y, racist_fish_object.x, racist_fish_object.y) < 50
 	{
 		//show_debug_message("attacking");
@@ -146,10 +146,45 @@ if is_racist && racist(numb_in_fish_table)
 	{
 		desired_x = racist_fish_object.x;
 		desired_y = racist_fish_object.y;
+		racist_fish_object.being_attacked = true;
+		racist_fish_object.being_attacked_by = id;
 		pause = -1; //always be active
 		_speed = 5;
+		
+		
+			//ez fix but looks bad?
+		//if racist_fish_object.grabbing // make it not move when the fish is grabbed
+		//{
+		//	move_towards_point(x,y,0);	
+		//}
+		
+			//would need some more work
+		if racist_fish_object.grabbing && !position_meeting(desired_x,desired_y,obj_fish_tank) // check if the fish is out of bounds if yes get the last valid point
+		{
+			var points = get_in_bounds_point(x,y,desired_x,desired_y,_speed,fish_tank.bbox_left,fish_tank.bbox_top,fish_tank.bbox_right,fish_tank.bbox_bottom,32);
+			desired_x = points[0];
+			desired_y = points[1];
+			
+			if sign(racist_fish_object.x - x)
+			{
+				image_xscale = 1;
+				//show_debug_message("going right");
+			}else image_xscale = -1;
+		}
+		
 	}
 }
+
+//if being_attacked && instance_exists(being_attacked_by) && !position_meeting(desired_x,desired_y,obj_fish_tank) //later?
+//{
+//	var _direction = point_direction(x,y,being_attacked_by.x,being_attacked_by.y) * -1;
+//	show_debug_message("init: " + string(_direction));
+//	desired_x += lengthdir_x(10,_direction);
+//	desired_y += lengthdir_y(10,_direction);
+//	var points = get_in_bounds_point(x,y,desired_x,desired_y,_speed,fish_tank.bbox_left,fish_tank.bbox_top,fish_tank.bbox_right,fish_tank.bbox_bottom,32);
+//	desired_x = points[0];
+//	desired_y = points[1];
+//}
 
 if attack && attack_fish(attack_at_fish) && fish_name != attack_at_fish
 {
@@ -191,6 +226,9 @@ if fish_health < 0
 			break;
 		}
 	}
+	var dead_fish = instance_create_layer(x,y,"Fish",obj_dead_fish);
+	dead_fish.image_index = image_index;
+	dead_fish._health = weight / 5;
 	instance_destroy();
 }
 

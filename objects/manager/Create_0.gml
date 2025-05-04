@@ -38,6 +38,11 @@ if !variable_global_exists("warnings")
 	global.warnings = [];	
 }
 
+if !variable_global_exists("mess")
+{
+	global.mess = [];	
+}
+
 numb_of_scenes = 2;
 
 hidden_your_fish = true;

@@ -60,6 +60,7 @@ if room == rm_fishtank
 						fish.attack = output[2];
 						fish.scared = output[3];
 						fish.attack_size = output[4];
+						fish.weight = _manager.fish_type_list[fish_type_list_id][4];
 					}
 				}
 			}			

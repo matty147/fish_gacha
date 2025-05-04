@@ -43,6 +43,8 @@ money_for_fish = 2.5;
 
 fish_name = "carp";
 
+weight = 1;
+
 numb_in_fish_table = 0;
 
 fish_health = 10;
@@ -60,6 +62,7 @@ is_racist = false;
 racist_fish_object = NaN;
 
 being_attacked = false;
+being_attacked_by = "";
 killed_by_fish = false;
 
 attack = false;
