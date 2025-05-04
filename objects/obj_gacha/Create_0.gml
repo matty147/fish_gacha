@@ -52,6 +52,10 @@ roll_chance = [ //values are in %
 
 chance_size = 1000;
 
+first_upgrade_mult = 5;
+second_upgrade_mult = 2;
+third_upgrade_mult = 5;
+
 
 current_fish_name = "spr_bass";
 curent_fish_rarity = rarity.COMMON;
