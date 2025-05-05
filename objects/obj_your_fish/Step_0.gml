@@ -1,6 +1,10 @@
 if set_up
 {
-
+	grab_fish = instance_create_layer(x + sprite_width / 2,y + sprite_height / 2,"fish_list",obj_fish_drag);
+	grab_fish.fish_name = fish_name;
+	grab_fish.image_xscale = 0.15;
+	grab_fish.image_yscale = 0.15;
+	
 	grab_fish.numb_in_fish_table = numb_in_fish_table;	
 	
 	set_up = false;

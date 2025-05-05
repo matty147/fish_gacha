@@ -1,3 +1,16 @@
+if set_up
+{
+	sprite_name = "spr_" + fish_name;
+	
+	sprite_index = asset_get_index(sprite_name);
+	display_sprite_size = 1;
+	numb_in_fish_table = 1;
+	image_xscale = 0.2;
+	image_yscale = 0.2;
+	
+	set_up = false;
+}
+
 if mouse_check_button_pressed(mb_left) && position_meeting(mouse_x,mouse_y,id)
 {
     

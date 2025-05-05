@@ -20,7 +20,7 @@ if button_type == 0
 	var x_pos = cost_background.x + cost_background.sprite_width / 2;
 	
 	draw_text_transformed_color(x_pos - 16,cost_background.y,cost,1,1,0,c_white,c_white,c_white,c_white,1);
-	draw_sprite_ext(spr_coin,0,x_pos - 10 + (string_width(string(cost)) + 32) / 2 ,cost_background.y + 2,0.5,0.5,0,c_white,1);
+	draw_sprite_ext(spr_coin,0,x_pos - 10 + (string_width(string(cost)) + 32) / 2 ,cost_background.y + 2,0.1,0.1,0,c_white,1);
 	
 	
 	draw_set_halign(fa_left);
@@ -39,7 +39,7 @@ if button_type == 0
 		var cost = shorten_number(my_price);
 	
 		draw_text_transformed_color(x_pos - 16,cost_background.y,cost,1,1,0,c_white,c_white,c_white,c_white,1);	
-		draw_sprite_ext(spr_coin,0,x_pos - 10 + (string_width(string(cost)) + 32) / 2 ,cost_background.y + 2,0.5,0.5,0,c_white,1);
+		draw_sprite_ext(spr_coin,0,x_pos - 10 + (string_width(string(cost)) + 32) / 2 ,cost_background.y + 2,0.1,0.1,0,c_white,1);
 	}else draw_text_transformed_color(x_pos,cost_background.y,"bought",1,1,0,c_white,c_white,c_white,c_white,1);	
 	
 	draw_set_halign(fa_left);

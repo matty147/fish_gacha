@@ -5,8 +5,8 @@ function spawn_fish(your_fish, rarity,position)
 		var fish_name = "spr_" + string(your_fish);
 		var fish = instance_create_depth(position[0], position[1],0,obj_fish);
 		fish.sprite_index = asset_get_index(fish_name);
-		fish.image_xscale = 3;
-		fish.image_yscale = 3;
+		fish.image_xscale =0.25;
+		fish.image_yscale = 0.25;
 		fish.x -= image_xscale;
 		fish.y -= image_yscale;
 		current_fish_name = string(your_fish);

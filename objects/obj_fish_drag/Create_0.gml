@@ -9,7 +9,7 @@ x = x - offset;
 def_pos_x = x;
 def_pos_y = y;
 
-fish_name = "cod"
+fish_name = "cod";
 
 //object_number is defined in the bg object
 
@@ -21,3 +21,5 @@ display_sprite_size = 1;
 numb_in_fish_table = 1;
 image_xscale = display_sprite_size;
 image_yscale = display_sprite_size;
+
+set_up = true;

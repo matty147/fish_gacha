@@ -5,8 +5,10 @@ switch button_type
 		{
 			if  mouse_check_button_pressed(mb_left)
 			{
+				
 				if global.money >= gacha.pull_cost
 				{
+					audio_play_sound(snd_buy,0,false);
 					global.bait++;
 					global.money -= gacha.pull_cost
 				}
@@ -23,8 +25,10 @@ switch button_type
 		{
 			if  mouse_check_button_pressed(mb_left)
 			{
+				
 				if global.upgrade_status[upgrade_type] < numb_of_upgrades && global.money >= my_price
 				{
+					audio_play_sound(snd_buy,0,false);
 					global.upgrade_status[upgrade_type]++;
 				
 					global.money -= my_price;

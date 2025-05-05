@@ -15,7 +15,10 @@ if keyboard_check_pressed(ord("L"))
 
 show_debug_log(debug_log);
 
-
+//if mouse_check_button_pressed(mb_left)
+//{
+//	audio_play_sound(snd_click,0,false);	
+//}
 
 if keyboard_check_pressed(vk_left)
 {

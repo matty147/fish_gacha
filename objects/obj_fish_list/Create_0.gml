@@ -98,6 +98,8 @@ if list_type == 0
 			fish.image_xscale = 4;
 			fish.image_yscale = 3.5;
 			fish.y += (fish.sprite_height + 30) * i;
+			fish.display_fish = _manager.fish_type_list[fish_id][0];
+			fish.fish_name = _manager.fish_type_list[fish_id][1];
 			fish.starting_y = fish.y;
 			fish.fish_list = id;
 			fish.depth = depth - 1;

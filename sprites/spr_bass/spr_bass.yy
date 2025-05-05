@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"common",
-    "path":"folders/Sprites/fish/common.yy",
+    "name":"fish",
+    "path":"folders/Sprites/fish.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

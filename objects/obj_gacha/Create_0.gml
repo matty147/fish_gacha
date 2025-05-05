@@ -8,36 +8,26 @@ enum rarity {
 }
 
 normal_fish = [
-"salmon",
-"trout",
 "bass",
-"catfish",
-"carp",
 ];
 
 common_fish = [
-"cod",
-"mackerel",
-"perch"];
+"blob_fish"
+];
 
 rare_fish = [
-"bluefintuna",
-"goldendorado"];
+"flat_fuck"];
 
 super_rare_fish = [
-"arowana",
-"opah",
-"napoleonwrasse"
+"macrell"
 ];
 
 super_super_rare_fish = [
-"pike",
-"herring"];
+"mini_fish"];
 
 ultra_rare_fish = [
-"coelacanth",
-"oarfish",
-"devilsholepupfish"];
+"smelly_can",
+"kysela_rybicka"];
 
 // roll chances
 

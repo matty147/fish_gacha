@@ -1,3 +1,8 @@
+if !audio_is_playing(snd_bg_music)
+{
+	audio_play_sound(snd_bg_music,0,true);
+}
+
 debug_log = false;
 window_set_fullscreen(true);
 
@@ -89,132 +94,92 @@ fish_type_list = [
         "bass", //1
         ["banana", "tropical"], //2
         ["other fish"], //3
-        120, //4
+        5, //4
         "4x2", //5
-        "c", //6
+        "n", //6
 		//------------ behaviour data 7-
 		10011, //7,
 		10,
-		"arowana",
+		"mini_fish",
 		1
 		
     ],
     [
-        "Arowana",
-        "arowana",
+        "blob fish",
+        "blob_fish",
         ["cold", "river"],
         ["insects", "smaller fish"],
-        150,
+        10,
         "5x2",
-        "n",
+        "c",
 		11100, //7,
 		10,
 		"-",
 		1
     ],
     [
-        "Perch",
-        "perch",
+        "Flat fuck",
+        "flat_fuck",
         ["toxic", "ocean"],
         ["algae", "crustaceans"],
-        80,
+        20,
         "3x2",
-        "c",
+        "r",
 		10000, //7,
 		10,
 		"-",
 		1
     ],
     [
-        "Cod",
-        "cod",
+        "Macrell",
+        "macrell",
         ["coral", "reef"],
         ["algae", "plankton"],
         60,
         "2x1",
-        "r",
+        "sr",
 		11100, //7,
 		10,
 		"-",
 		1
     ],
     [
-        "Opah",
-        "opah",
+        "Mini fish",
+        "mini_fish",
         ["fast", "deep sea"],
         ["smaller fish", "squid"],
-        300,
+        1,
         "6x3",
-        "sr",
+        "ssr",
 		10001, //7,
 		10,
-		"arowana",
+		"kysela_rybicka",
 		100
     ],
     [
-        "Goldendorado",
-        "goldendorado",
+        "smelly can",
+        "smelly_can",
         ["deep", "scary"],
         ["fish", "crustaceans"],
         250,
         "4x3",
-        "ssr",
+        "ur",
 		11001, //7,
 		10,
-		"opah",
+		"-",
 		15
     ],
     [
-        "Coelacanth",
-        "coelacanth",
-        ["pond", "cute"],
-        ["flakes", "algae"],
-        20,
-        "2x1",
+        "kysela rybicka",
+        "kysela_rybicka",
+        ["deep", "scary"],
+        ["fish", "crustaceans"],
+        1,
+        "4x3",
         "ur",
-		10110, //7,
+		11001, //7,
 		10,
-		"goldendorado",
-		1
-    ],
-    [
-        "Oarfish",
-        "oarfish",
-        ["predator", "ocean"],
-        ["fish", "seals"],
-        500,
-        "8x4",
-        "ur",
-		10101, //7,
-		10,
-		"arowana",
-		3
-    ],
-    [
-        "Coelacanth",
-        "coelacanth",
-        ["sharp", "fast"],
-        ["fish", "squid"],
-        400,
-        "7x3",
-        "sr",
-		10000, //7,
-		10,
-		"catfish",
-		7
-    ],
-    [
-        "Catfish",
-        "catfish",
-        ["muddy", "river"],
-        ["insects", "plants"],
-        100,
-        "4x2",
-        "c",
-		00000, //7,
-		7,
-		"oarfish",
-		5
-    ]
-];
+		"mini_fish",
+		15
+    ]];
 
