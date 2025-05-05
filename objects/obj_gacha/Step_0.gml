@@ -109,7 +109,7 @@ if pulls > 0 && !pulling
 	
 			var position = [_x,_y]; // x,y
 	
-			var rand = random_range(1 + (global.upgrade_status[2] * first_upgrade_mult * chance_size),(75 + global.upgrade_status[2] * first_upgrade_mult)* chance_size);
+			var rand = random_range(1 + (global.upgrade_status[2] * first_upgrade_mult * chance_size),(75 + global.upgrade_status[2] * first_upgrade_mult)* chance_size); // change chances based on strenght
 
 			pitty_counter += 0.01;
 			

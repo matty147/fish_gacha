@@ -98,6 +98,7 @@ if mouse_check_button_released(mb_left) && grabbing
 
 if limit_crowd && too_crowded(crowded_limit,obj_moving_fish)
 {
+	too_crowded_warning = true;
 	//show_debug_message("crowded");
 	if global.time % 100
 	{
@@ -106,25 +107,28 @@ if limit_crowd && too_crowded(crowded_limit,obj_moving_fish)
 		fish_health -= random_range(0,0.01 * mult);
 		//show_debug_message("health: " + string(fish_health));
 	}
-}
+}else too_crowded_warning = false
 
 //show_debug_message("health: " + string(fish_health));
 if too_crowded(7,obj_mess)
 {
+	messy_warning = true;
 	var mult = sqrt(max(instance_number(obj_mess) - 7, 0)); //make fish die faster if there are more then the alowed limit
 	show_debug_message(mult);
 	fish_health -= random_range(0.01,0.05 * mult);
-}
+}else messy_warning = false;
 
 if too_crowded(4,obj_dead_fish)
 {
+	dead_warning = true;
 	var mult = sqrt(max(instance_number(obj_dead_fish) - 4, 0)); //make fish die faster if there are more then the alowed limit
 	show_debug_message(mult);
 	fish_health -= random_range(0.05,0.1 * mult);
-}
+}else dead_warning = false;
 
 if is_racist && racist(numb_in_fish_table)
 {
+	racist_warning = true;
 //	if is_nan(racist_fish_object)
 //	{
 		var count = instance_number(obj_moving_fish);
@@ -188,7 +192,7 @@ if is_racist && racist(numb_in_fish_table)
 		}
 		
 	}
-}
+}else racist_warning = false;
 
 //if being_attacked && instance_exists(being_attacked_by) && !position_meeting(desired_x,desired_y,obj_fish_tank) //later?
 //{
@@ -201,22 +205,22 @@ if is_racist && racist(numb_in_fish_table)
 //	desired_y = points[1];
 //}
 
-if attack && attack_fish(attack_at_fish) && fish_name != attack_at_fish
-{
-	//show_debug_message("attacking");
-}
+//if attack && attack_fish(attack_at_fish) && fish_name != attack_at_fish
+//{
+//	//show_debug_message("attacking");
+//}
 
-if scared && atack_fish_victim(scared_type) && fish_name != attack_at_fish
-{
-	//show_debug_message("attacking"); 
-}
+//if scared && atack_fish_victim(scared_type) && fish_name != attack_at_fish
+//{
+//	//show_debug_message("attacking"); 
+//}
 
-if attack_size && attack_smaller_fish(fish_size)
-{
+//if attack_size && attack_smaller_fish(fish_size)
+//{
 	
-	//show_debug_message("smaller");
+//	//show_debug_message("smaller");
 	
-}
+//}
 
 if fish_health < 0
 {
@@ -253,3 +257,11 @@ if grabbing
 	x = mouse_x;	
 	y = mouse_y;	
 }else depth = layer_get_depth("fish");
+
+//add warnings if time
+/*
+too_crowded_warning = false;
+racist_warning = false;
+dead_warning = false;
+messy_warning = false;
+*/

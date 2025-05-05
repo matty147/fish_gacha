@@ -1,0 +1,1 @@
+draw_text_ext_transformed(x,y,text,0,sprite_width - 10,1,1,0);

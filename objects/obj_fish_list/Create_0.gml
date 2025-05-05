@@ -117,11 +117,12 @@ if list_type == 0
 	
 }else if list_type == 2
 {
-	for (var w = 0; w < array_length(global.warnings) + 1;w++)
+	for (var w = 0; w < array_length(global.warnings);w++)
 	{	
 		warning = instance_create_layer(x + sprite_width / 2,y,"fish_list",obj_warning);
 		warning.y += (warning.sprite_height + 30) * w;
 		warning.parent_id = id;
+		warning.text = global.warnings[w];
 	}
 	
 }

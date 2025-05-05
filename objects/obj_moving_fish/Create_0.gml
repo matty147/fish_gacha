@@ -73,3 +73,8 @@ scared_type = "arowana"
 
 attack_size = true;
 fish_size = 5;
+
+too_crowded_warning = false;
+racist_warning = false;
+dead_warning = false;
+messy_warning = false;
